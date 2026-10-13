@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript Practice</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 780px; margin: 20px auto; padding: 0 16px; }
+  section { border: 1px solid #888; border-radius: 8px; padding: 12px 16px; margin: 16px 0; }
+  button { padding: 6px 14px; margin: 3px; cursor: pointer; }
+  input[type=text], input[type=date], select { padding: 6px; margin: 3px; }
+  table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+  th, td { border: 1px solid #888; padding: 6px 10px; text-align: left; }
+  #timerDisplay { font-size: 48px; font-weight: bold; font-family: ui-monospace, Consolas, monospace; }
+  #colorSample { width: 160px; height: 80px; border: 2px solid #888; border-radius: 8px; margin: 8px 0; }
+  #questionText { font-size: 20px; font-weight: bold; min-height: 28px; }
+</style>
+</head>
+<body>
+<h1>Практические задания</h1>
+<p>Задания 136–155: откройте Console (F12). Задания 156–160 работают прямо на этой странице.</p>
+
+<section>
+  <h2>Задание 156. Таймер обратного отсчёта</h2>
+  <input type="text" id="timerSeconds" placeholder="Секунды, например 10">
+  <button id="timerStart">Старт</button>
+  <button id="timerPause">Пауза</button>
+  <button id="timerReset">Сброс</button>
+  <div id="timerDisplay">00:00</div>
+  <p id="timerMessage"></p>
+</section>
+
+<section>
+  <h2>Задание 157. Интерактивная цветовая палитра</h2>
+  <div id="colorSample"></div>
+  <input type="color" id="colorPicker" value="#ffffff">
+  <strong id="colorHex"></strong>
+  <button id="colorReset">Стандартный цвет</button>
+</section>
+
+<section>
+  <h2>Задание 158. Калькулятор стоимости поездки</h2>
+  <input type="text" id="tripDistance" placeholder="Расстояние, км">
+  <input type="text" id="tripConsumption" placeholder="Расход на 100 км, л">
+  <input type="text" id="tripPrice" placeholder="Цена литра, ₸">
+  <button id="tripBtn">Рассчитать</button>
+  <p id="tripResult"></p>
+</section>
+
+<section>
+  <h2>Задание 159. Генератор случайных вопросов</h2>
+  <div id="questionText">Нажмите «Следующий вопрос»</div>
+  <p id="questionCounter"></p>
+  <button id="questionNext">Следующий вопрос</button>
+  <button id="questionReset">Начать заново</button>
+</section>
+
+<section>
+  <h2>Задание 160. Система регистрации IT-проектов</h2>
+  <div>
+    <input type="text" id="projTitle" placeholder="Название проекта">
+    <input type="text" id="projAuthor" placeholder="ФИО участника">
+  </div>
+  <div>
+    <select id="projDirection">
+      <option value="">Выберите направление</option>
+    </select>
+    <input type="date" id="projDate">
+    <button id="projAdd">Зарегистрировать</button>
+  </div>
+  <p id="projMessage"></p>
+  <input type="text" id="projSearch" placeholder="Поиск по названию">
+  <table>
+    <thead><tr><th>№</th><th>Название</th><th>Участник</th><th>Направление</th><th>Дата подачи</th><th>Статус</th></tr></thead>
+    <tbody id="projBody"></tbody>
+  </table>
+  <h3>Статистика по направлениям</h3>
+  <ul id="projStats"></ul>
+  <small>Используйте вымышленные данные. Проекты сохраняются в localStorage этого браузера.</small>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
